@@ -9,13 +9,13 @@ namespace KramerMethod
     internal class Program
     {
         static List<int> Main_Matrix = new List<int>() 
-        { 0, 0, 0, 0,
-          0, 0, 0, 0,
-          0, 0, 0, 0 };
+        { 0/*0*/, 0/*1*/, 0/*2*/, 0/*3*/,
+          0/*4*/, 0/*5*/, 0/*6*/, 0/*7*/,
+          0/*8*/, 0/*9*/, 0/*10*/, 0/*11*/ };
 
         static int Counting(List<int> Matrix)
         {
-            int first_res1 = Matrix[0] * Matrix[4] * Matrix[10];
+            int first_res1 = Matrix[0] * Matrix[5] * Matrix[10];
             int second_res1 = Matrix[1] * Matrix[6] * Matrix[8];
             int third_res1 = Matrix[2] * Matrix[4] * Matrix[9];
             int first_result = first_res1 + second_res1 + third_res1;
@@ -27,7 +27,7 @@ namespace KramerMethod
 
             int main_res = first_result - second_result;
 
-            Console.WriteLine($"{Matrix[0]}*{Matrix[4]}*{Matrix[10]} + {Matrix[1]}*{Matrix[6]}*{Matrix[8]} + {Matrix[2]}*{Matrix[4]}*{Matrix[9]} = {first_res1}");
+            Console.WriteLine($"{Matrix[0]}*{Matrix[5]}*{Matrix[10]} + {Matrix[1]}*{Matrix[6]}*{Matrix[8]} + {Matrix[2]}*{Matrix[4]}*{Matrix[9]} = {first_res1}");
             Console.WriteLine($"{Matrix[2]}*{Matrix[5]}*{Matrix[8]} + {Matrix[1]}*{Matrix[4]}*{Matrix[10]} + {Matrix[0]}*{Matrix[6]}*{Matrix[9]} = {second_res1}");
             Console.WriteLine($"{first_result} - {second_result} = {main_res}");
 
